@@ -1,0 +1,175 @@
+//Автоматична висота відео
+//Робочий приклад автоматичної висоти відео
+//CSS код авто висоти для відео
+
+.video {
+     margin-bottom: 20px;
+}
+.video-ah {
+     position: relative;
+     padding-top: 56.25%;
+}
+.video-ah iframe {
+     width: 100%;
+     height: 100%;
+     display: block;
+     position: absolute;
+     margin: 0;
+     top: 0;
+     left: 0;
+     border: none;
+}
+
+HTML код iframe
+<div class="video">
+     <div class="video-ah">
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/wcwsWb2zTIA"></iframe>
+     </div>
+</div>
+
+Відео youtube по центру з максимальною шириною
+Якщо сайт адаптивний і розтягується на весь екран, краще задати максимальну ширину 860-1100px і відцінувати відео. У цьому прикладі максимальна ширина відеоблоку 800px.
+
+.video {
+     max-width: 800px;
+     margin: 0 auto 20px;
+}
+.video-wrp {
+     position: relative;
+     padding-top: 56.25%;
+}
+.video-wrp iframe {
+     width: 100%;
+     height: 100%;
+     display: block;
+     position: absolute;
+     margin: 0;
+     top: 0;
+     left: 0;
+     border: none;
+}
+
+HTML код iframe
+
+<div class="video">
+     <div class="video-wrp">
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/wcwsWb2zTIA"></iframe>
+     </div>
+</div>
+
+
+Два відео в ряд
+Розміщення відео блоків в один ряд з вирівнюванням float: left
+
+.video_2 {
+     overflow: hidden;
+}
+.video_2-row {
+     margin: 0 -10px 0 -10px;
+}
+.video_2-col {
+     float: left;
+     width: 50%;
+     margin-bottom: 20px;
+}
+.video_2-wrp {
+     position: relative;
+     padding-top: 56.25%;
+     margin: 0 10px 0 10px;
+     box-sizing: border-box;
+}
+.video_2-wrp iframe {
+     width: 100%;
+     height: 100%;
+     display: block;
+     position: absolute;
+     margin: 0;
+     top: 0;
+     left: 0;
+     border: none;
+}
+@media screen and (max-width:800px){
+     .video-col {
+         width: 100%;
+     }
+}
+
+HTML код відео в ряд на iframe
+
+<div class="video_2">
+     <div class="video_2-row">
+         <div class="video_2-col">
+             <div class="video_2-wrp">
+                 <iframe width="560" height="315" src="https://www.youtube.com/embed/wcwsWb2zTIA"></iframe>
+            </div>
+         </div>
+         <div class="video_2-col">
+             <div class="video_2-wrp">
+                 <iframe width="560" height="315" src="https://www.youtube.com/embed/wcwsWb2zTIA"></iframe>
+           </div>
+         </div>
+     </div>
+</div>
+
+Три відео в ряд
+Приклад за аналогією до попереднього тільки вже 3 відео в ряду
+
+.video_3 {
+     overflow: hidden;
+}
+.video_3-row {
+     margin: 0 -10px 0 -10px;
+}
+.video_3-col {
+     float: left;
+     width: 33.3%;
+     margin-bottom: 20px;
+}
+.video_3-wrp {
+     position: relative;
+     padding-top: 56.25%;
+     margin: 0 10px 0 10px;
+     box-sizing: border-box;
+}
+.video_3-wrp iframe {
+     width: 100%;
+     height: 100%;
+     display: block;
+     position: absolute;
+     margin: 0;
+     top: 0;
+     left: 0;
+     border: none;
+}
+@media screen and (max-width:1200px){
+     .video_3-col {
+         width: 50%;
+     }
+}
+@media screen and (max-width:800px){
+     .video_3-col {
+         width: 100%;
+     }
+}
+
+HTML код відео по 3 шт на iframe
+
+<div class="video_3">
+     <div class="video_3-row">
+         <div class="video_3-col">
+             <div class="video_3-wrp">
+                 <iframe width="560" height="315" src="https://www.youtube.com/embed/wcwsWb2zTIA"></iframe>
+            </div>
+         </div>
+         <div class="video_3-col">
+             <div class="video_3-wrp">
+                 <iframe width="560" height="315" src="https://www.youtube.com/embed/wcwsWb2zTIA"></iframe>
+           </div>
+         </div>
+         <div class="video_3-col">
+             <div class="video_3-wrp">
+                 <iframe width="560" height="315" src="https://www.youtube.com/embed/wcwsWb2zTIA"></iframe>
+             </div>
+         </div>
+     </div>
+</div>
